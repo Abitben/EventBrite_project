@@ -14,7 +14,7 @@
   puts username = Faker::Internet.username,
   user = User.create!(
     email: "#{username}@yopmail.com",
-    encrypted_password: Faker::Internet.password,
+    password: Faker::Internet.password,
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     description: Faker::Lorem.paragraph(sentence_count: 2), 
