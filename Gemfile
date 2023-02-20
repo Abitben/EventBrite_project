@@ -85,3 +85,5 @@ gem "table_print", "~> 1.5"
 
 
 gem "dotenv-rails", "~> 2.8"
+
+gem "sendgrid-ruby", "~> 6.6"
