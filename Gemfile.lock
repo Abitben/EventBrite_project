@@ -88,6 +88,10 @@ GEM
       railties (>= 6.0.0)
     date (3.3.3)
     debug (1.7.1)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     faker (3.1.1)
       i18n (>= 1.8.11, < 2)
@@ -251,6 +255,7 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  dotenv-rails (~> 2.8)
   faker (~> 3.1)
   htmlbeautifier (~> 1.4)
   importmap-rails
