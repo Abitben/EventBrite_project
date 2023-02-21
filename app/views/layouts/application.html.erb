@@ -32,25 +32,30 @@
                   <li><a class="dropdown-item" href="<%=new_user_session_path%>">Log In</a></li>
                   <li><a class="dropdown-item" href="<%=new_user_registration_path%>">Sign Up</a></li>
                 </ul>
-              <%end%>
-              <% if user_signed_in?%>
-                <li class="nav-item">
-                  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn" %>
-                </li>
-              <%end%>
-              <% if user_signed_in?%>
+              </li>
+            <%end%>
+            <% if user_signed_in?%>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profil / Log Out
+                </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="<%=new_user_session_path%>">Log In</a></li>
-                  <li><a class="dropdown-item" href="<%=new_user_registration_path%>">Sign Up</a></li>
+                <li>
+                    <a class="dropdown-item" href="<%=user_path(@current_user.id)%>">Mon profil</a>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn" %>
+                  </li>
                 </ul>
-              <%end%>
-            </li>
-          </ul>
-        </div>
+              </li>
+            <%end%>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
-  <body>
-    <%= yield %>
-  </body>
+    </div>
+  </nav>
+</header>
+<body>
+  <%= yield %>
+</body>
 </html>
