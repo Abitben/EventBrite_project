@@ -2,37 +2,34 @@
   <div class="container">
     <div class="row">
       <div class="col text-center mb-5">
-        <h1 class="display-4">Retrouve tous les évements sur cette page !</h1>
+        <h1 class="display-4">C'est l'évenement du Siècle !</h1>
         <% if user_signed_in?%>
-          <p class="lead">A quel évenment tu veux participer <%=@user.email%> ? </p>
+          <p class="lead">Tu veux y participer <%=@user.email%> ? </p>
         <%end%>
       </div>
     </div>
-    <div class="row">
-    <% @all_events.each do |event| %>
-<div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+
+
+    <div class="container">
         <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
           <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
           <div class="card-img-overlay d-flex flex-column">
             <div class="card-body">
-              <small class="card-meta mb-2"><%= event.location %></small>
-              <h4 class="card-title mt-0 "><a class="text-white" herf="#">  <%= event.title %> </a></h4>
-              <small><i class="far fa-clock"></i>   <%= event.start_date %> </small>
-              <small><i class="far fa-clock"></i>    <%= event.price %> </small>
-              <a href="<%= event_path(event.id) %>" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Lien vers l'évenement</a>
+              <small class="card-meta mb-2"><%= @event.location %></small>
+              <h4 class="card-title mt-0 "><a class="text-white" herf="#">  <%= @event.title %> </a></h4>
+              <small><i class="far fa-clock"></i>   <%= @event.start_date %> </small>
+              <small><i class="far fa-clock"></i>    <%= @event.price %> </small>
               <p></p>
-              <small><%= event.description %></small>
+              <small><%= @event.description %></small>
             </div>
             <div class="card-footer">
               <div class="media">
                 <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
                 <div class="media-body">
-                  <h6 class="my-0 text-white d-block"><%= event.admin.first_name %></h6>
+                  <h6 class="my-0 text-white d-block"><%= @event.admin.first_name %></h6>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-<%end%>
 </section>
