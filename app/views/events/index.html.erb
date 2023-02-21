@@ -4,7 +4,7 @@
       <div class="col text-center mb-5">
         <h1 class="display-4">Retrouve tous les évements sur cette page !</h1>
         <% if user_signed_in?%>
-          <p class="lead">A quel évenment tu veux participer <%=@user.email%> ? </p>
+          <p class="lead">A quel évenment tu veux participer <%=current_user.email%> ? </p>
         <%end%>
       </div>
     </div>
