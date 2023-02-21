@@ -5,10 +5,20 @@ class EventsController < ApplicationController
   end
 
   def new
+    @event = Event.new
   end
 
   def create
+    @event = Event.new(event_params)
+    @event.admin_id = current_user.id
+  
+    if @event.save
+      redirect_to events_path
+    else
+      render 'new'
+    end
   end
+  
 
   def show
     @event = Event.find(params[:id])
@@ -17,19 +27,21 @@ class EventsController < ApplicationController
     @end_date = end_date?
   end
 
-
   def count_attendances
     @event = Event.find(params[:id])
     attendances_to_event = Attendance.where(event_id: @event.id)
-    attendances_count = attendances_to_event.count
-    return attendances_count
+    attendances_to_event.count
   end
 
   def end_date?
     @event = Event.find(params[:id])
-    event_dur_sec = (@event.duration) * 60
-    end_date = @event.start_date + event_dur_sec
-    return end_date
+    event_dur_sec = @event.duration * 60
+    @event.start_date + event_dur_sec
   end
 
+  private
+
+  def event_params
+    params.require(:event).permit(:title, :description, :start_date, :duration, :price, :location)
+  end
 end
