@@ -18,11 +18,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-          <% if user_signed_in?%>
-            <li class="nav-item">
-              <a class="nav-link mx-2" href="<%= new_event_path %>"><i class="bi bi-plus-circle-fill"></i> Ajouter un évenement</a>
-            </li>
-          <%end%>
+            <% if user_signed_in?%>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="<%= new_event_path %>"><i class="bi bi-plus-circle-fill"></i> Ajouter un évenement</a>
+              </li>
+            <%end%>
             <% unless user_signed_in?%>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
