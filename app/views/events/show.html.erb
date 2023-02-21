@@ -15,19 +15,25 @@
           <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
           <div class="card-img-overlay d-flex flex-column">
             <div class="card-body">
-              <small class="card-meta mb-2"><%= @event.location %></small>
-              <h4 class="card-title mt-0 "><a class="text-white" herf="#">  <%= @event.title %> </a></h4>
-              <small><i class="far fa-clock"></i>   <%= @event.start_date %> </small>
-              <small><i class="far fa-clock"></i>    <%= @event.price %> </small>
-              <p></p>
-              <small><%= @event.description %></small>
+              <small class="card-meta mb-2"> HEY MAIS C'EST OU ? <%= @event.location %></small>
+              <h4 class="card-title mt-0 "><a class="text-white" herf="#"> <%= @event.title %> </a></h4>
+              <small><i class="far fa-clock"></i>  Début de l'évenement : <%= @event.start_date %> </small>
+              <br>
+              <small><i class="far fa-clock"></i>  Durée de l'évenement : <%= @event.duration %> minutes </small>
+              <br>
+              <small><i class="far fa-clock"></i>  Début de fin : <%= @end_date %> </small>
+              <br>
+              <br>
+              <h4 class="card-title mt-0 "><a class="text-white">  <%= @event.price  %>€ </a></h4>
+              <br>
+              <small>Waouh ! Il y a <%= @attendances %> participants pour le moment ! </small>
             </div>
             <div class="card-footer">
               <div class="media">
-                <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
                 <div class="media-body">
-                  <h6 class="my-0 text-white d-block"><%= @event.admin.first_name %></h6>
+                  <h6 class="my-0 text-white d-block"> L'organisateur : <%= @event.admin.first_name %></h6>
                 </div>
+                <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
               </div>
             </div>
           </div>
