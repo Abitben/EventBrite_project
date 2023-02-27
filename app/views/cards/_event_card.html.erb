@@ -1,0 +1,29 @@
+<div class="container">
+        <div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+          <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+          <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+              <small class="card-meta mb-2"> HEY MAIS C'EST OU ? ADRESS</small>
+              <h4 class="card-title mt-0 "><a class="text-white" herf="#"> TITRE</a></h4>
+              <small><i class="far fa-clock"></i>  Début de l'évenement : START DATE </small>
+              <br>
+              <small><i class="far fa-clock"></i>  Durée de l'évenement : DURATION </small>
+              <br>
+              <small><i class="far fa-clock"></i>  Début de fin : END DATE</small>
+              <br>
+              <br>
+              <h4 class="card-title mt-0 "><a class="text-white">  XXX€ </a></h4>
+              <br>
+              <small>Waouh ! Il y a X participants pour le moment ! </small>
+              <%= button_to "Rejoindre l'évenement", events_path, class: "btn btn-primary", method: :get %>
+            </div>
+            <div class="card-footer">
+              <div class="media">
+                <div class="media-body">
+                  <h6 class="my-0 text-white d-block"> L'organisateur : ADMIN</h6>
+                </div>
+                <img class="mr-3 rounded-circle" src="https://assets.codepen.io/460692/internal/avatars/users/default.png" alt="Generic placeholder image" style="max-width:50px">
+              </div>
+            </div>
+          </div>
+        </div>

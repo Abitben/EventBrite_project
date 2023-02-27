@@ -1,0 +1,64 @@
+<html>
+  <br>
+    <h1 class="h3 mb-3 font-weight-normal text-center"> Ici on te montre les exemples de tout l'UI </h1>
+    <div>
+      <h2> La navbar</h2>
+      <br>
+      <%= render 'layouts/navbar' %>
+      <br>
+      <h2> Les formulaires</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <%= render 'forms/form_signup' %>
+          </div>
+          <div class="col">
+            <%= render 'forms/form_login' %>
+          </div>
+        </div>
+        <br>
+        <div class="container">
+        <div class="row">
+          <div class="col">
+            <%= render 'forms/form_reset_password' %>
+          </div>
+          <div class="col">
+            <%= render 'forms/form_changepassword' %>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h2> Les bannières</h2>
+      <br>
+      <h3> La plus grande</h3>
+      <br>
+      <%= render 'hero_large' %>
+      <br>
+      <br>
+      <h3> La plus petite</h3>
+      <br>
+      <br>
+      <%= render 'hero_small' %>
+      <br>
+      <h2> Les cards</h2>
+      <h3> La card "évenement"</h3>
+      <%= render 'cards/event_card' %>
+      <br>
+      <h3> La card "liste des évenements"</h3>
+      <%= render 'cards/events_card' %>
+      <br>
+      <br>
+      <h3> La card "liste des participants"</h3>
+      <%= render 'cards/cards_participants' %>
+      <br>
+      <br>
+      <h3> La card "listes des villes"</h3>
+      <br>
+      <h2> Les cards</h2>
+      <br>
+      <%= render 'comments/comments' %>
+      <br>
+      <h2> Le Footer</h2>
+      <%= render 'layouts/footer' %>
+    </html>

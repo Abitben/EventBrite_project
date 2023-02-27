@@ -89,3 +89,5 @@ gem "dotenv-rails", "~> 2.8"
 gem "sendgrid-ruby", "~> 6.6"
 
 gem "devise", "~> 4.9"
+
+gem "stripe", "~> 8.3"

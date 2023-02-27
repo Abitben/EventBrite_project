@@ -3,11 +3,9 @@ class EventsController < ApplicationController
 
   def index
     @all_events = Event.all
-    current_user
   end
 
   def new
-    current_user
     @event = Event.new
   end
 
@@ -24,7 +22,6 @@ class EventsController < ApplicationController
   
 
   def show
-    current_user
     @event = Event.find(params[:id])
     @user = @event.admin
     @attendances = count_attendances

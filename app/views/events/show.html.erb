@@ -4,7 +4,7 @@
       <div class="col text-center mb-5">
         <h1 class="display-4">C'est l'évenement du Siècle !</h1>
         <% if user_signed_in?%>
-          <p class="lead">Tu veux y participer <%=@user.email%> ? </p>
+          <p class="lead">Tu veux y participer <%=current_user.email%> ? </p>
         <%end%>
       </div>
     </div>
@@ -27,6 +27,9 @@
               <h4 class="card-title mt-0 "><a class="text-white">  <%= @event.price  %>€ </a></h4>
               <br>
               <small>Waouh ! Il y a <%= @attendances %> participants pour le moment ! </small>
+              <% if user_signed_in? && current_user != @event.admin %>
+              <%= button_to "Rejoindre l'évenement", new_event_attendance_path(@event.id), class: "btn btn-primary", method: :get %>
+              <% end%>
             </div>
             <div class="card-footer">
               <div class="media">

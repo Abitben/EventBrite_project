@@ -5,57 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script src="https://js.stripe.com/v3/"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="<%= root_path %>">EVENTBRITE</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <% if user_signed_in?%>
-              <li class="nav-item">
-                <a class="nav-link mx-2" href="<%= new_event_path %>"><i class="bi bi-plus-circle-fill"></i> Ajouter un évenement</a>
-              </li>
-            <%end%>
-            <% unless user_signed_in?%>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Log In/Sign Up
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="<%=new_user_session_path%>">Log In</a></li>
-                  <li><a class="dropdown-item" href="<%=new_user_registration_path%>">Sign Up</a></li>
-                </ul>
-              </li>
-            <%end%>
-            <% if user_signed_in?%>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Profil / Log Out
-                </a>
-                <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item" href="<%=user_path(@current_user.id)%>">Mon profil</a>
-                  </li>
-                  <li class="nav-item">
-                    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn" %>
-                  </li>
-                </ul>
-              </li>
-            <%end%>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
 <body>
+  <%= render 'layouts/navbar' %>
   <%= yield %>
 </body>
 </html>

@@ -1,5 +1,6 @@
 class UserMailer < ApplicationMailer
-  default from: 'dupaquier_ben@live.fr'
+  default from: ENV['SENDGRID_EMAIL']
+  
 
   def welcome_email(user)
     #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
