@@ -1,7 +1,6 @@
 <html>
   <br>
   <h1 class="mb-3 font-weight-normal text-center"> Hey toi là !! Tu veux voir des trucs cheums ? REGARDE CA ! </h1>
-
   <div>
     <hr>
     <div class="container">
@@ -12,9 +11,8 @@
     </div>
     <hr>
   </div>
-
   <div class="container">
-    <h2> Les formulaires</h2>
+    <h2> Molécules : Les formulaires</h2>
   </div>
   <div class="container">
     <div class="row">
@@ -39,12 +37,10 @@
   </div>
   <br>
   <br>
-
   <hr>
-
   <div>
     <div class="container">
-      <h2> Les bannières</h2>
+      <h2> Organismes : Les bannières</h2>
       <br>
       <h3> La plus grande</h3>
       <br>
@@ -60,62 +56,77 @@
     <%= render 'shared/hero_small' %>
     <br>
   </div>
-  
   <div>
     <hr>
     <div class="container">
-      <h2> Les cards</h2>
-      <h3> La card "évenement"</h3>
+      <h2> Organismes : Les cards</h2>
+      <h3> Molécule : La card "évenement"</h3>
     </div>
     <%= render 'events/event_card' %>
     <br>
-    <h3> La card "liste des évenements"</h3>
+    <h3> Organisme : La card "liste des évenements"</h3>
     <%= render 'events/events_card' %>
     <br>
     <br>
-    <h3> La card "liste des participants"</h3>
+    <h3> Organisme : La card "liste des participants"</h3>
     <%= render 'events/cards_participants' %>
     <br>
     <br>
-    <h3> La card "listes des villes"</h3>
+    <h3> la card "listes des villes"</h3>
     <br>
   </div>
-
   <hr>
-
   <div class="container">
     <h2> Les commmzzzz</h2>
     <br>
+    <h3> Molécules : les deux types de commzzz</h3>
+    <%= render 'events/comment_a' %>
+    <br>
+    <%= render 'events/comment_b' %>
+    <br>
+    <br>
+    <h3> Organisme : la page avec les commzz</h3>
     <%= render 'events/comments' %>
   </div>
   <br>
   <hr>
-
-
   <div class="container">
     <h2> La page show</h2>
     <br>
+    <h3> Molécule : photo sur le côté et text à droite</h3>
+    <%= render 'page_layout/img_info' %>
+    <br>
+    <br>
+    <hr>
+    <h3> Molécule : icone + Texte + button </h3>
+    <%= render 'page_layout/icon_btn' %>
+    <br>
+    <br>
+    <hr>
+    <h3> Molécule : description </h3>
+    <%= render 'page_layout/description' %>
+    <br>
+    <br>
+    <hr>
+    <h3> Molécule : réseaux sociaux </h3>
+    <%= render'page_layout/social_btn'%>
+    <br>
+    <br>
+    <hr>
+    <h3> Organisme : La page show</h3>
     <%= render 'page_layout/event_complete' %>
     <br>
   </div>
-
   <hr>
-
   <div class="container">
-  <h2> Le hero avec la photo sur le côté</h2>
-
+    <h2> Organisme : Le hero avec la photo sur le côté</h2>
     <br>
     <%= render 'page_layout/hero_img' %>
     <br>
-  
-
   </div>
-
-<hr>
+  <hr>
   <div class="container">
     <h2> Le Footer</h2>
     <%= render 'layouts/footer' %>
   </div>
-
-
 </html>
