@@ -19,20 +19,20 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <%= render 'forms/form_signup' %>
+        <%= render 'shared/form_signup' %>
       </div>
       <div class="col">
-        <%= render 'forms/form_login' %>
+        <%= render 'shared/form_login' %>
       </div>
     </div>
     <br>
     <div class="container">
       <div class="row">
         <div class="col">
-          <%= render 'forms/form_reset_password' %>
+          <%= render 'shared/form_reset_password' %>
         </div>
         <div class="col">
-          <%= render 'forms/form_changepassword' %>
+          <%= render 'shared/form_changepassword' %>
         </div>
       </div>
     </div>
@@ -49,7 +49,7 @@
       <h3> La plus grande</h3>
       <br>
     </div>
-    <%= render 'hero_large' %>
+    <%= render 'shared/hero_large' %>
     <br>
     <br>
     <div class="container">
@@ -57,7 +57,7 @@
     </div>
     <br>
     <br>
-    <%= render 'hero_small' %>
+    <%= render 'shared/hero_small' %>
     <br>
   </div>
   
@@ -67,14 +67,14 @@
       <h2> Les cards</h2>
       <h3> La card "évenement"</h3>
     </div>
-    <%= render 'cards/event_card' %>
+    <%= render 'events/event_card' %>
     <br>
     <h3> La card "liste des évenements"</h3>
-    <%= render 'cards/events_card' %>
+    <%= render 'events/events_card' %>
     <br>
     <br>
     <h3> La card "liste des participants"</h3>
-    <%= render 'cards/cards_participants' %>
+    <%= render 'events/cards_participants' %>
     <br>
     <br>
     <h3> La card "listes des villes"</h3>
@@ -86,7 +86,7 @@
   <div class="container">
     <h2> Les commmzzzz</h2>
     <br>
-    <%= render 'comments/comments' %>
+    <%= render 'events/comments' %>
   </div>
   <br>
   <hr>
